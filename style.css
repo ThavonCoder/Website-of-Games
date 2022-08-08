@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+*{
+    font-family: 'Amatic SC', cursive;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+nav{
+    height: 60px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px 0px 100px;
+
+    
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
+}
+nav ul li{
+    margin: 0 20px;
+}
+nav ul li a{
+    color:white;
+    text-decoration: none; 
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+nav ul li a:hover,nav ul li a.active{
+    color: red;
+    background: white;
+
+}
+nav ul li a.active:hover{
+    color: cyan;
+}
+nav .logo{
+    font-size: 30px;
+    color: white;
+    font-weight: 600;
+}
+nav .menu-button i{
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+   display: none;
+}
+#click{
+    display: none;
+}
+@media (max-width: 690px ){
+    nav .menu-button i{
+        display: block;
+    }
+    #click:checked ~ .menu-button i:before{
+        content: "\f00d";
+    }
+    nav ul{
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        background-color: black;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: all 0.5s ease;
+        z-index: 999;
+    }
+    #click:checked ~ ul{
+        left:0%;
+    }
+    nav ul li{
+        margin: 40px 0;
+    }
+    nav ul li a{
+        font-size: 20px;
+        display: block;
+    }
+    nav ul li a:hover,nav ul li a.active{
+        color: red;
+        background:none;
+    
+    }
+}
+.bgimg img{
+    width: 100%;
+}
+.content{
+    width: 1200px;
+    height: 2500px;
+    margin: 0 auto;
+    /* background-color: red; */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+.content .box{
+    width: 99%;
+    height: 99%;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.sub_box{
+    width: 100%;
+    height: 49%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: space-between;
+}
+.box1{
+    width: 33%;
+    height: 99%;
+    background-color: orange;
+    transform: scale(1);
+    transition: all 0.4s ease;
+    
+}
+.box1:hover{
+    transform: scale(0.9);
+}
+.box1 img{
+    width: 100%;
+    overflow: hidden;
+}
+.box1 h2{
+    font-size: 25px;
+    text-align: center;
+    margin-top:50px ;
+    color: white;
+}
+
+
+
+
+
+
+
+.dwn ul{
+	width: 100%;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.dwn li{
+	display: inline-block;
+	margin: 10px;
+}
+.download{
+	width: 200px;
+	height: 75px;
+	background: #000;
+	float: left;
+	border-radius: 4px;
+	position: relative;
+	color: #fff;
+	cursor: pointer;
+	border: 1px solid #fff;
+    transition: all 0.4s ease;
+    transform: scale(1);
+}
+.download .fa{
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 15%;
+	transform: translate(-50%, -50%);
+}
+.p1, .p2{
+	position: absolute;
+	left: 70px;
+}
+.p1{
+	top: 20px;
+	font-size: 12px;
+}
+.p2{
+	top: 35px;
+	font-size: 16px;
+}
+.download:hover{
+	filter: invert(100%);
+    transform: scale(1.1);
+}
+@media(max-width:1009px){
+    .dwn ul{
+        top: 50%;
+        left: 50%;
+        
+    }
+}
+@media(max-width:655px){
+    .dwn ul{
+        top: 35%;
+        left: 50%;
+        
+    }
+}
+@media(max-width:407px){
+    .dwn ul{
+        top: 25%;
+        left: 50%;
+        
+    }
+    .download{
+        width: 150px;
+        height: 50px;
+    }
+    .p1{   
+        top:20% ;
+        font-size: 9px;
+    }
+    .p2{
+        top:25px;
+        font-size: 13px;
+    }
+}
+
+
+
+
+
+
+
+
